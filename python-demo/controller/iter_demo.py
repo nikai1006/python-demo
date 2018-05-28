@@ -3,7 +3,7 @@ iter迭代器
 """
 
 obj = range(5)
-iterator = iter(obj) ###
+iterator = iter(obj)  ### iter()等价于obj.__iter_()
 try:
     while True:
         print(iterator.__next__())
