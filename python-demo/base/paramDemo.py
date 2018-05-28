@@ -23,3 +23,15 @@ print('nikai' in age_dict2)
 print(age_dict2.keys())
 print(age_dict2.values())
 print(age_dict2.popitem()) ##弹出所有
+
+##############################set#####################################
+index_set = set([0,1,2,3,4,5])
+print(index_set.pop())##弹出一个
+print(index_set.pop())
+print(index_set.pop())
+index_set.add(6) ##添加一个
+print(index_set)
+
+#########################################################
+nothing = None ##空
+print(nothing)
