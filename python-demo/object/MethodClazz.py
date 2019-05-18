@@ -10,7 +10,7 @@ class MethodClazz(object):
     def __init__(self, name, age, weight):
         self.name = name
         self._age = age
-        self.__weight = weight #私有变量
+        self.__weight = weight  # 私有变量
 
     def add(self):
         pass
@@ -23,10 +23,18 @@ class MethodClazz(object):
 
     @classmethod
     def get_hobby(cls):
+        """
+        使用classmethod修饰器的方法，可以直接使用类名来调用
+        :return:
+        """
         return cls.hobby
 
     @property
     def get_weight(self):
+        """
+        使用property修饰器的方法，可以像访问属性一样调用方法
+        :return: 
+        """"""
        return self.__weight
 
 
