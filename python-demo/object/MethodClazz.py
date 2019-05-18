@@ -34,8 +34,8 @@ class MethodClazz(object):
         """
         使用property修饰器的方法，可以像访问属性一样调用方法
         :return: 
-        """"""
-       return self.__weight
+        """
+        return self.__weight
 
 
 
