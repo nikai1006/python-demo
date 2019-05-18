@@ -70,6 +70,12 @@ class Operator(object):
     def __and__(self, other):
         pass
 
+    def __dir__(self):
+        return self.__dict__.keys()
+
+    def __str__(self):
+        return '%s is %s years old' % (self.name, self.age)
+
 
 if __name__ == '__main__':
     operator = Operator('nikai', 23)
@@ -78,3 +84,6 @@ if __name__ == '__main__':
     print(operator + lucy)
     print(operator == lucy)
     print(operator == nikai)
+    print(nikai)
+    print(dir(nikai))
+    print(str(nikai))
