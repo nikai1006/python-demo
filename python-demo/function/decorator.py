@@ -20,3 +20,4 @@ def a(x, y):
 
 if __name__ == '__main__':
     a(4, 7)
+    print(a.__name__)
