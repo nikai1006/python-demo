@@ -15,3 +15,6 @@ if __name__ == '__main__':
     print(t)
     for i in t:
         print(i)
+    #     list转元组
+    t = tuple([1, 3, 4, 6])
+    print(type(t))
