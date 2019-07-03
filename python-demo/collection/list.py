@@ -13,7 +13,7 @@ if __name__ == '__main__':
     print(list)
     print(list[-1])
     print(list[-5])
-    list = range(1, 100, 2)
+    list = [i for i in range(1, 100, 2)]
     print(list)
     print(list[-1])
     print(list[-20])
