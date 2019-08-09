@@ -25,11 +25,11 @@ def copy(file, dest, min, subfix):
         fpath, fname = os.path.split(file)
         if not os.path.exists(dest):
             os.makedirs(dest)
-        if os.path.getsize(file) > min:
+        if os.path.getsize(file) > min * 1024:
             shutil.move(file, dest + "/" + fname + subfix)
         else:
-            print(file + " 小于" + min + ",清理掉")
-            # os.remove(file)
+            print(file + " 小于" + str(min) + ",清理掉")
+            os.remove(file)
 
 
 def transform(path, dest="C://photo", min=20, subfix='.jpg'):
@@ -47,7 +47,7 @@ def transform(path, dest="C://photo", min=20, subfix='.jpg'):
             files = os.listdir(path)
             for file in files:
                 path_file = path + "/" + file
-                print("process " + file + ", " + str(os.path.getsize(path_file) / 1024)+"KB")
+                print("process " + file + ", " + str(os.path.getsize(path_file) / 1024) + "KB")
                 copy(path_file, dest + "/" + time.strftime("%Y-%m-%d"), min, subfix)
         elif os.path.isfile(path):
             print(str(path) + "is file")
