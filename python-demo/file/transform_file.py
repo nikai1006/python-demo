@@ -55,7 +55,10 @@ def transform(path, dest="C://photo", min=20, subfix='.jpg'):
 
 if __name__ == '__main__':
     args = sys.argv
-    if len(args) > 1:
+    args_len = len(args)
+    if args_len > 2:
+        transform(str(args[1]), str(args[2]))
+    elif args_len > 1:
         transform(str(args[1]))
     else:
         print("请输入文件目录")
