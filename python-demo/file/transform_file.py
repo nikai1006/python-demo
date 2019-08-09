@@ -32,13 +32,13 @@ def copy(file, dest, min, subfix):
             # os.remove(file)
 
 
-def transform(path, dest="C://photo", min=200, subfix='.jpg'):
+def transform(path, dest="C://photo", min=20, subfix='.jpg'):
     """
     处理文件夹
     :param path:
     :param dest:
-    :param min:
-    :param subfix:
+    :param min: 最小，默认20k
+    :param subfix: 文件后缀
     :return:
     """
     if os.path.exists(path):
@@ -47,7 +47,7 @@ def transform(path, dest="C://photo", min=200, subfix='.jpg'):
             files = os.listdir(path)
             for file in files:
                 path_file = path + "/" + file
-                print("process " + file + ", " + str(os.path.getsize(path_file) / 1024))
+                print("process " + file + ", " + str(os.path.getsize(path_file) / 1024)+"KB")
                 copy(path_file, dest + "/" + time.strftime("%Y-%m-%d"), min, subfix)
         elif os.path.isfile(path):
             print(str(path) + "is file")
